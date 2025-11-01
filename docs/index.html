@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luijie (Phavel) - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">HOME</a></li>
+                <li><a href="#about" class="nav-link">ABOUT</a></li>
+                <li><a href="#skills" class="nav-link">SKILLS</a></li>
+                <li><a href="#projects" class="nav-link">PROJECTS</a></li>
+                <li><a href="#contact" class="nav-link">CONTACT</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="cloud-menu-toggle">
+                <img src="cloud.png" alt="Menu" class="cloud-icon">
+            </div>
+        </div>
+    </nav>
+    <div class="menu-backdrop"></div>
+
+    <!-- Home Section -->
+    <section id="home" class="section home-section">
+        <div class="container">
+            <div class="home-content">
+                <h1 class="name-title fade-in">
+                    <span class="nickname">phavel</span>
+                    <span class="full-name">Luijie</span>
+                </h1>
+                <p class="description fade-in-delay">
+                    Specializing in creating dynamic, user-friendly websites & apps. 
+                    From front-end aesthetics to back-end functionality, I turn ideas into reality.
+                </p>
+                <div class="cta-buttons fade-in-delay-2">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Experience</h3>
+                    <p class="experience-years">
+                        <span class="year-number">4</span> years
+                    </p>
+                    <p class="experience-desc">developing apps and websites</p>
+                    <p class="about-description">
+                        With a passion for creating seamless digital experiences, I've spent the last 4 years 
+                        honing my skills in both front-end and back-end development. I bring ideas to life 
+                        through clean code, intuitive design, and innovative solutions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fab fa-python skill-icon"></i>
+                    <span class="skill-name">Python</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-database skill-icon"></i>
+                    <span class="skill-name">MongoDB</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-java skill-icon"></i>
+                    <span class="skill-name">Java</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-js skill-icon"></i>
+                    <span class="skill-name">JavaScript</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-flask skill-icon"></i>
+                    <span class="skill-name">Flask</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-database skill-icon"></i>
+                    <span class="skill-name">MySQL</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-database skill-icon"></i>
+                    <span class="skill-name">SQLite</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-html5 skill-icon"></i>
+                    <span class="skill-name">HTML</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-css3-alt skill-icon"></i>
+                    <span class="skill-name">CSS</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-fire skill-icon"></i>
+                    <span class="skill-name">Firebase</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-slider">
+                <div class="slider-wrapper">
+                    <div class="projects-container" id="projectsContainer">
+                        <!-- Projects will be dynamically added here -->
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <button class="slider-btn prev-btn" id="prevBtn" aria-label="Previous project">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M15 18l-6-6 6-6"/>
+                        </svg>
+                    </button>
+                    <div class="slider-indicators" id="indicators"></div>
+                    <button class="slider-btn next-btn" id="nextBtn" aria-label="Next project">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 18l6-6-6-6"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <p class="contact-description">
+                    Have a project in mind? Let's collaborate and bring your ideas to life.
+                </p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        <span class="contact-label">Email:</span>
+                        <a href="mailto:contact@phavel.dev" class="contact-link">contact@phavel.dev</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github contact-icon"></i>
+                        <span class="contact-label">GitHub:</span>
+                        <a href="https://github.com/phavel" target="_blank" class="contact-link">github.com/phavel</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-briefcase contact-icon"></i>
+                        <span class="contact-label">Available for:</span>
+                        <span class="contact-value">Freelance & Full-time</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Image Modal -->
+    <div class="project-modal" id="projectModal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose" aria-label="Close modal">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12"/>
+                </svg>
+            </button>
+            <img class="modal-image" id="modalImage" src="" alt="Project image">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
