@@ -122,17 +122,17 @@ class ProjectsSlider {
             {
                 title: 'Project 1',
                 description: 'A dynamic web application built with modern technologies.',
-                folder: 'project1'
+                folder: 'assets/img/project1'
             },
             {
                 title: 'Project 2',
                 description: 'An innovative solution for seamless user experiences.',
-                folder: 'project2'
+                folder: 'assets/img/project2'
             },
             {
                 title: 'Project 3',
                 description: 'A cutting-edge platform combining front-end and back-end excellence.',
-                folder: 'project3',
+                folder: 'assets/img/project3',
                 image: 'project3.png',
                 images: ['project3.png', 'project2.png']
             }
@@ -160,6 +160,11 @@ class ProjectsSlider {
         if (!this.container) return;
         
         this.container.innerHTML = '';
+        if (!this.cardSlideshows) this.cardSlideshows = [];
+        // clear any existing intervals
+        this.cardSlideshows.forEach(id => clearInterval(id));
+        this.cardSlideshows = [];
+
         this.projects.forEach((project, index) => {
             const projectCard = document.createElement('div');
             projectCard.className = 'project-card';
@@ -184,6 +189,27 @@ class ProjectsSlider {
                 ${project.link ? `<a href="${project.link}" target="_blank" class="project-link">View Project</a>` : ''}
             `;
             this.container.appendChild(projectCard);
+
+            // Inline slideshow before click
+            if (project.images && project.images.length > 1) {
+                const imgEl = projectCard.querySelector('.project-image');
+                if (imgEl) {
+                    let idx = 0;
+                    const sources = project.images.map(img => project.folder ? `${project.folder}/${img}` : img);
+                    const id = setInterval(() => {
+                        idx = (idx + 1) % sources.length;
+                        imgEl.style.opacity = '0';
+                        setTimeout(() => {
+                            imgEl.src = sources[idx];
+                            imgEl.style.opacity = '1';
+                            imgEl.setAttribute('data-image', sources[idx]);
+                            imgEl.setAttribute('data-images', sources.join(','));
+                        }, 150);
+                    }, 3500);
+                    this.cardSlideshows.push(id);
+                    projectCard.addEventListener('mouseenter', () => clearInterval(id));
+                }
+            }
         });
         
         this.updateIndicators();
