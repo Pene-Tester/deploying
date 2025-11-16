@@ -123,7 +123,8 @@ class ProjectsSlider {
                 title: 'Project 1',
                 description: 'A dynamic web application built with modern technologies.',
                 folder: 'assets/img/project1',
-                image: 'proj1_event0.png'
+                image: 'proj1_event0.png',
+                images: ['proj1_event1.png', 'proj1_event0.png', 'proj1_event2.png']
             },
             {
                 title: 'Project 2',
