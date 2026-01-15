@@ -129,7 +129,9 @@ class ProjectsSlider {
             {
                 title: 'Project 2',
                 description: 'An innovative solution for seamless user experiences.',
-                folder: 'assets/img/project2'
+                folder: 'assets/img/project2',
+                image: 'proj2_material0.png',
+                images: ['proj2_material0.png']
             },
             {
                 title: 'Project 3',
