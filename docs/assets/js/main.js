@@ -128,14 +128,14 @@ class ProjectsSlider {
             },
             {
                 title: 'Project 2',
-                description: 'An innovative solution for seamless user experiences.',
+                description: 'App for cement calculation',
                 folder: 'assets/img/project2',
                 image: 'proj2_material0.png',
                 images: ['proj2_material0.png']
             },
             {
                 title: 'Project 3',
-                description: 'A cutting-edge platform combining front-end and back-end excellence.',
+                description: 'Web App sign language translator powered by Machine Learning',
                 folder: 'assets/img/project3',
                 image: 'project3.png',
                 images: ['project3.png', 'project2.png']
